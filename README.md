@@ -1,3 +1,4 @@
-# AIM AHEAD at Georgetown University 
+![Powered by](icbi-aimahead-hids.png)
 
-![Powered by](Dragster.jpg)
+# Welcome to the AIM AHEAD website at Georgetown University 
+
