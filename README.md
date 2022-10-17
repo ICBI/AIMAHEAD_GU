@@ -1,2 +1,3 @@
-# AIMAHEAD_GU
-AIM AHEAD at Georgetown University 
+# AIM AHEAD at Georgetown University 
+
+![Powered by](Dragster.jpg)
