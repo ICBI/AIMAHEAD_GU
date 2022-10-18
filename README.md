@@ -1,4 +1,5 @@
-![Powered by](icbi-aimahead-hids.png)
+
+<img src="icbi-aimahead-hids.png" alt="Powered by" width="600"/>
 
 # Welcome to the AIM AHEAD at Georgetown University 
 
@@ -8,7 +9,7 @@
 
 #### Heading 4
 
-Plain text here. This is a hyperlink 
+Plain text here. 
 
 * Bullet point 1
 * Bullet point 2
