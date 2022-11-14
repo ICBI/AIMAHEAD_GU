@@ -1,5 +1,4 @@
 
-<img src="icbi-aimahead-hids.png" alt="Powered by" width="600"/>
 
 # Welcome to the AIM AHEAD project page at Georgetown University 
 
