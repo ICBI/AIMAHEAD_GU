@@ -13082,7 +13082,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://colab.research.google.com/github/ICBI/AIMAHEAD_GU/blob/main/Courses/ML_Concepts/Module_03_Model_Selection/Module_03_Module_and_Hyperparameter_Selection.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<p><a href="https://colab.research.google.com/github/ICBI/AIMAHEAD_GU/blob/main/Courses/ML_Concepts/Module_04_Model_Selection/Module_04_Module_and_Hyperparameter_Selection.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 
 </div>
 </div>
@@ -13091,7 +13091,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="https://raw.githubusercontent.com/ICBI/AIMAHEAD_GU_publicCourseData/main/AAlogo1.jpg" alt="Powered by" width="150"/></p>
-<h1 id="AI/ML-for-Healthcare-Applications-:-Lab-3-Model-Selection-and-Hyperparameter-Tuning">AI/ML for Healthcare Applications : Lab 3 Model Selection and Hyperparameter Tuning<a class="anchor-link" href="#AI/ML-for-Healthcare-Applications-:-Lab-3-Model-Selection-and-Hyperparameter-Tuning">&#182;</a></h1><p>Based on material from the Georgetown <a href="https://healthinformatics.georgetown.edu">Health Informatics and Data Science</a> program and licensed under  <a href="https://creativecommons.org/licenses/by/4.0/">CC4.0</a></p>
+<h1 id="AI/ML-for-Healthcare-Applications-:-Lab-4-Model-Selection-and-Hyperparameter-Tuning">AI/ML for Healthcare Applications : Lab 4 Model Selection and Hyperparameter Tuning<a class="anchor-link" href="#AI/ML-for-Healthcare-Applications-:-Lab-4-Model-Selection-and-Hyperparameter-Tuning">&#182;</a></h1><p>Based on material from the Georgetown <a href="https://healthinformatics.georgetown.edu">Health Informatics and Data Science</a> program and licensed under  <a href="https://creativecommons.org/licenses/by/4.0/">CC4.0</a></p>
 <p>The aim of this notebook is to provide an hands-on demo of selecting model and tuning hyperparameters using sklearn.</p>
 
 </div>
@@ -13107,7 +13107,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We will start by loading some of the packages that will help us 
+<p>We will start by loading some of the packages that will help us
 organize and visualize the data. Other packages will be loaded as necessary.</p>
 
 </div>
@@ -13115,7 +13115,7 @@ organize and visualize the data. Other packages will be loaded as necessary.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import packages</span>
@@ -13124,8 +13124,8 @@ organize and visualize the data. Other packages will be loaded as necessary.</p>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">collections</span><span class="o">,</span> <span class="nn">numpy</span>
 <span class="kn">import</span> <span class="nn">mlxtend</span>
-<span class="kn">import</span> <span class="nn">matplotlib</span> 
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> 
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span><span class="p">;</span> <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
 <span class="n">matplotlib</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -13192,7 +13192,7 @@ organize and visualize the data. Other packages will be loaded as necessary.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>wget https://raw.githubusercontent.com/ICBI/AIMAHEAD_GU_publicCourseData/main/ML_Concepts/diabetes.csv
@@ -13234,7 +13234,7 @@ diabetes.csv        100%[===================&gt;]  23.84K  --.-KB/s    in 0.001s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># make a data frame</span>
@@ -13256,7 +13256,7 @@ diabetes.csv        100%[===================&gt;]  23.84K  --.-KB/s    in 0.001s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">diabetes_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13272,7 +13272,7 @@ diabetes.csv        100%[===================&gt;]  23.84K  --.-KB/s    in 0.001s
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13459,7 +13459,7 @@ diabetes.csv        100%[===================&gt;]  23.84K  --.-KB/s    in 0.001s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">diabetes_df</span><span class="o">.</span><span class="n">shape</span>
@@ -13475,7 +13475,7 @@ diabetes.csv        100%[===================&gt;]  23.84K  --.-KB/s    in 0.001s
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13500,7 +13500,7 @@ diabetes.csv        100%[===================&gt;]  23.84K  --.-KB/s    in 0.001s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">diabetes_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -13516,7 +13516,7 @@ diabetes.csv        100%[===================&gt;]  23.84K  --.-KB/s    in 0.001s
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13542,7 +13542,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">diabetes_df</span><span class="p">[</span><span class="s1">&#39;Pregnancies&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13563,7 +13563,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">diabetes_df</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">diabetes_df</span><span class="p">[</span><span class="s1">&#39;Glucose&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13580,7 +13580,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">diabetes_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -13596,7 +13596,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13622,7 +13622,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Counter</span><span class="p">(</span><span class="n">diabetes_df</span><span class="p">[</span><span class="s1">&#39;Outcome&#39;</span><span class="p">])</span>
@@ -13638,7 +13638,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13663,7 +13663,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Preparing the data for the ML models</span>
@@ -13678,7 +13678,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_df</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_df</span><span class="o">.</span><span class="n">shape</span>
@@ -13694,7 +13694,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13719,7 +13719,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_df</span><span class="p">,</span> <span class="n">y_df</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -13732,7 +13732,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span>
@@ -13748,7 +13748,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13765,7 +13765,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Counter</span><span class="p">(</span><span class="n">y_train</span><span class="p">),</span> <span class="n">Counter</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
@@ -13781,7 +13781,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13823,7 +13823,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
@@ -13838,11 +13838,11 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cross_validate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> 
-               <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cross_validate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span>
+               <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
                <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;f1&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -13856,7 +13856,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13875,7 +13875,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv_results</span> <span class="o">=</span> <span class="n">cross_validate</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;f1&#39;</span><span class="p">)</span>
@@ -13888,7 +13888,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">cv_results</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
@@ -13904,7 +13904,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13921,7 +13921,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv_results</span><span class="p">[</span><span class="s1">&#39;test_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -13937,7 +13937,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13962,7 +13962,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
@@ -13982,7 +13982,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14007,7 +14007,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
@@ -14025,7 +14025,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14050,7 +14050,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;poly&#39;</span><span class="p">)</span>
@@ -14068,7 +14068,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14093,7 +14093,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_and_test</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
@@ -14117,7 +14117,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
@@ -14132,7 +14132,7 @@ Details here: <a href="https://scikit-learn.org/stable/modules/cross_validation.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_and_test</span><span class="p">(</span><span class="n">best_model</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
@@ -14187,7 +14187,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
@@ -14208,7 +14208,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s2">&quot;liblinear&quot;</span><span class="p">)</span>
@@ -14221,7 +14221,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;penalty&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;l1&#39;</span><span class="p">,</span> <span class="s1">&#39;l2&#39;</span><span class="p">],</span>
@@ -14243,11 +14243,11 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> 
-                   <span class="n">parameters</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span>
+                   <span class="n">parameters</span><span class="p">,</span>
                    <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
                    <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;f1&quot;</span><span class="p">)</span>
 </pre></div>
@@ -14259,7 +14259,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -14275,7 +14275,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[31]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14295,7 +14295,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">cv_results_</span>
@@ -14311,7 +14311,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14351,7 +14351,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">best_params_</span>
@@ -14367,7 +14367,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14392,7 +14392,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">best_score_</span>
@@ -14408,7 +14408,7 @@ Details: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.mode
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[34]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -14434,7 +14434,7 @@ Grid search returns an instance of the model with best combination parameters</p
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14483,7 +14483,7 @@ weighted avg       0.76      0.77      0.76       154
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
@@ -14496,7 +14496,7 @@ weighted avg       0.76      0.77      0.76       154
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_and_dump_best_model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -14517,9 +14517,9 @@ weighted avg       0.76      0.77      0.76       154
 
   <span class="n">grid_params_lr</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;clf__penalty&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;l1&#39;</span><span class="p">,</span> <span class="s1">&#39;l2&#39;</span><span class="p">],</span>
 		<span class="s1">&#39;clf__C&#39;</span><span class="p">:</span> <span class="n">param_range_lr</span><span class="p">,</span>
-		<span class="s1">&#39;clf__solver&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;liblinear&#39;</span><span class="p">]}]</span> 
-  
-  <span class="n">grid_params_svm</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;clf__kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">],</span> 
+		<span class="s1">&#39;clf__solver&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;liblinear&#39;</span><span class="p">]}]</span>
+
+  <span class="n">grid_params_svm</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;clf__kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">],</span>
 		<span class="s1">&#39;clf__C&#39;</span><span class="p">:</span> <span class="n">param_range_svm</span><span class="p">}]</span>
 
   <span class="n">grid_params_rf</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;clf__criterion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;gini&#39;</span><span class="p">,</span> <span class="s1">&#39;entropy&#39;</span><span class="p">],</span>
@@ -14537,20 +14537,20 @@ weighted avg       0.76      0.77      0.76       154
 			<span class="n">param_grid</span><span class="o">=</span><span class="n">grid_params_lr</span><span class="p">,</span>
 			<span class="n">scoring</span><span class="o">=</span><span class="n">score</span><span class="p">,</span>
 			<span class="n">cv</span><span class="o">=</span><span class="n">folds</span><span class="p">,</span>
-      <span class="n">n_jobs</span><span class="o">=</span><span class="n">jobs</span><span class="p">)</span> 
-  
+      <span class="n">n_jobs</span><span class="o">=</span><span class="n">jobs</span><span class="p">)</span>
+
   <span class="n">gs_svm</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">pipe_svm</span><span class="p">,</span>
 			<span class="n">param_grid</span><span class="o">=</span><span class="n">grid_params_svm</span><span class="p">,</span>
 			<span class="n">scoring</span><span class="o">=</span><span class="n">score</span><span class="p">,</span>
 			<span class="n">cv</span><span class="o">=</span><span class="n">folds</span><span class="p">,</span>
 			<span class="n">n_jobs</span><span class="o">=</span><span class="n">jobs</span><span class="p">)</span>
-  
+
   <span class="n">gs_rf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">pipe_rf</span><span class="p">,</span>
 			<span class="n">param_grid</span><span class="o">=</span><span class="n">grid_params_rf</span><span class="p">,</span>
 			<span class="n">scoring</span><span class="o">=</span><span class="n">score</span><span class="p">,</span>
-			<span class="n">cv</span><span class="o">=</span><span class="n">folds</span><span class="p">,</span> 
+			<span class="n">cv</span><span class="o">=</span><span class="n">folds</span><span class="p">,</span>
 			<span class="n">n_jobs</span><span class="o">=</span><span class="n">jobs</span><span class="p">)</span>
-  
+
   <span class="c1"># List of pipelines for ease of iteration</span>
   <span class="c1">#grids = [gs_lr, gs_svm, gs_rf]</span>
   <span class="n">grids</span> <span class="o">=</span> <span class="p">[</span><span class="n">gs_lr</span><span class="p">,</span> <span class="n">gs_svm</span><span class="p">]</span>
@@ -14567,8 +14567,8 @@ weighted avg       0.76      0.77      0.76       154
   <span class="n">best_clf</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="n">best_gs</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
   <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">gs</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grids</span><span class="p">):</span>
-	  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Estimator: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">grid_dict</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>	
-	  <span class="c1"># Fit grid search	</span>
+	  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Estimator: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">grid_dict</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+	  <span class="c1"># Fit grid search</span>
 	  <span class="n">gs</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 	  <span class="c1"># Best params</span>
 	  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Best params: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">gs</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
@@ -14579,7 +14579,7 @@ weighted avg       0.76      0.77      0.76       154
 		  <span class="n">best_gs</span> <span class="o">=</span> <span class="n">gs</span>
 		  <span class="n">best_clf</span> <span class="o">=</span> <span class="n">idx</span>
   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Best Classifier with best hyperparameters: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">grid_dict</span><span class="p">[</span><span class="n">best_clf</span><span class="p">])</span>
-  
+
   <span class="k">return</span> <span class="n">best_gs</span>
 </pre></div>
 
@@ -14590,7 +14590,7 @@ weighted avg       0.76      0.77      0.76       154
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_model_gs</span> <span class="o">=</span> <span class="n">train_and_dump_best_model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
@@ -14633,7 +14633,7 @@ Best Classifier with best hyperparameters: SVM
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">best_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14670,18 +14670,6 @@ weighted avg       0.76      0.77      0.77       154
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><blockquote><blockquote><blockquote><p><strong>I think we need some summary conclusion statement here</strong></p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
